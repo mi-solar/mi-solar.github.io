@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi solar</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logotipo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--escribir aqui-->
+    <header class="mb-5">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Mi Solar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse"
+                    aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse">
+                    <div class="nav s flex-column flex-sm-row justify-content-end">
+                        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="flex-sm-fill text-sm-center nav-link" href="#" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Cotizar</a>
+                        <a class="flex-sm-fill text-sm-center nav-link" href="#">Nosotros</a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Cotizar</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Juanito Perez">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a role="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        
+        <section class="container mb-5">
+            <h1>Mi Solar</h1>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <!--escribir aqui-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
