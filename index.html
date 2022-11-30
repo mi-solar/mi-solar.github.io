@@ -42,21 +42,41 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form action="mailto:l.araya@duocuc.cl" method="post" enctype="text/plain">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">TU NOMBRE</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Juanito Perez">
+                                <input type="text" name="nombre" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Juanito Perez">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputFone" class="form-label">TU NUMERO DE TELEFONO</label>
-                                <input type="tel" class="form-control" id="exampleInputFone" maxlength="10"  placeholder="ejemplo: 912345678">
+                                <input type="tel" name="telefono" class="form-control" id="exampleInputFone" value="+56" maxlength="12"
+                                    placeholder="ejemplo: 912345678">
                             </div>
                             <div class="mb-3">
-                                <label for="date" class="form-label">¿CUANDO TE PODEMOS COMUNICAR?
-</label>
-                                <input type="date" class="form-control" id="date" />
+                                <label for="calendario" class="form-label">¿CUANDO TE PODEMOS COMUNICAR?
+                                </label>
+                                <input type="datetime-local" name="fecha" class="form-control" id="calendario">
                             </div>
-                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            <div class="mb-3">
+                                <label for="servicio" class="form-label">SERVICIO QUE QUIERES CONTRATAR
+                                </label>
+                                <select class="form-select" name="tipo-servicio" id="servicio" aria-label="Default select example">
+                                    <option selected>Elige:</option>
+                                    <option value="Mantenimiento Solar">Mantenimiento Solar</option>
+                                    <option value="Instalacion Solar">Instalacion Solar</option>
+                                    <option value="Instalacion Enchufes">Instalacion Enchufes</option>
+                                    <option value="Instalacion Interruptor">Instalacion Interruptor</option>
+                                    <option value="Caja de Distribucion">Caja de Distribucion</option>
+                                    <option value="Instalacion Luces">Instalacion Luces</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="otro" class="form-label">OTRO SERVICIO QUE NECESITES
+                                </label>
+                                <textarea name="otro-servicio" class="form-control" id="otro" rows="3"></textarea>
+                            </div>
+                            <button type="submit" value="Enviar" class="btn btn-primary">Enviar</button>
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -66,9 +86,15 @@
             </div>
         </div>
         <!-- Modal -->
-        
+
         <section class="container mb-5">
-            <h1>Mi Solar</h1>
+            <div class="row">
+                <img class="col-6 col-sm-6" src="assets/img/logo.png" alt="">
+                <div class="col-12 col-sm-6">
+                    <h1>Energia solar</h1>
+                    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laudantium, distinctio numquam quisquam iste eos necessitatibus iusto quidem dolores! A veniam voluptatem officia consectetur amet quis excepturi deserunt! Voluptatibus, debitis!</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
