@@ -1,0 +1,120 @@
+/*variables*/
+/*variables*/
+/*mixins*/
+/*mixins*/
+/*tipografia */
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+.h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  line-height: 49px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+.h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  line-height: 49px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+.h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+.h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+.h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+h6 {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+.h6 {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+/*tipografia */
+
+/*# sourceMappingURL=style.css.map */

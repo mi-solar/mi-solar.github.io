@@ -1,10 +1,114 @@
+/*variables*/
+$tipografia-proyecto: 'Roboto', sans-serif;
+$fondo-proyecto: #FFFFFF;
+$fondo-secundario-proyecto: #D2320E;
+$color-principal-proyecto: #990D00;
+$color-secundario-proyecto: #331C17;
+$letras-proyecto: #FFFFFF;
+$letras-secundario-proyecto: #fff3dc;
+/*variables*/
 
-/*variables */
-/*variables */
-
-/*mixin */
-/*mixin */
+/*mixins*/
+@mixin heading-1 {
+    font-family: $tipografia-proyecto;
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: bold;
+    letter-spacing: 0px;
+}
+@mixin heading-2 {
+    font-family: $tipografia-proyecto;
+    font-size: 40px;
+    line-height: 49px;
+    font-weight: bold;
+    letter-spacing: 0px;
+}
+@mixin heading-3 {
+    font-family: $tipografia-proyecto;
+    font-size: 32px;
+    line-height: 39px;
+    font-weight: bold;
+    letter-spacing: 0px;
+}
+@mixin heading-4 {
+    font-family: $tipografia-proyecto;
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: bold;
+    letter-spacing: 0px;
+}
+@mixin heading-5 {
+    font-family: $tipografia-proyecto;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    letter-spacing: 0px;
+}
+@mixin heading-6 {
+    font-family: $tipografia-proyecto;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: bold;
+    letter-spacing: 0px;
+}
+@mixin parrafo {
+    font-family: $tipografia-proyecto;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+@mixin enlace {
+    font-family: $tipografia-proyecto;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+/*mixins*/
 
 /*tipografia */
+h1 {
+    @include heading-1;
+}
+.h1 {
+    @include heading-1;
+}
+h2 {
+    @include heading-2;
+}
+.h2 {
+    @include heading-2;
+}
+h3 {
+    @include heading-3;
+}
+.h3 {
+    @include heading-3;
+}
+h4 {
+    @include heading-4;
+}
+.h4 {
+    @include heading-4;
+}
+h5 {
+    @include heading-5;
+}
+.h5 {
+    @include heading-5;
+}
+h6 {
+    @include heading-6;
+}
+.h6 {
+    @include heading-6;
+}
+p {
+    @include parrafo;
+}
+a {
+    @include enlace;
+}
 
 /*tipografia */

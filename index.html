@@ -8,6 +8,8 @@
     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logotipo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8dcbdfedb3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -15,11 +17,19 @@
     <header class="mb-5">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container">
-                <a class="navbar-brand" href="#">Mi Solar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse"
-                    aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <div class="row">
+                    <a class="navbar-brand col-9 m-0" href="#"><img class="col-4" src="assets/img/logo.png"
+                            alt=" logo de mi solar"></a>
+                    <div class="col-3 d-flex justify-content-center align-items-center">
+                        <a class="navbar-toggler" role="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </a>
+                    </div>
+
+                </div>
+
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse">
                     <div class="nav s flex-column flex-sm-row justify-content-end">
                         <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Inicio</a>
@@ -39,7 +49,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Cotizar</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <a role="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
                     </div>
                     <div class="modal-body">
                         <form action="mailto:jorgea.misolar@gmail.com" method="post" enctype="text/plain">
@@ -77,62 +87,73 @@
                                 </label>
                                 <textarea name="otro-servicio" class="form-control" id="otro" rows="3"></textarea>
                             </div>
-                            <button type="submit" value="Enviar" class="btn btn-primary">Enviar</button>
+                            <button type="submit" value="Enviar" class="btn btn-primary rounded-pill">Enviar</button>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <a role="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</a>
+                        <a role="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cerrar</a>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Modal -->
 
-        <section class="container mb-5">
+        <section class="container mb-5" id="inicio">
             <h2 class="visually-hidden position-absolute user-select-none">no aparece</h2>
             <div class="row">
-                <img class="col-6 col-sm-6" src="assets/img/logo.png" alt="">
-                <div class="col-12 col-sm-6">
-                    <h3>Mi Solar es una empresa cual cuenta con especialistas en Energía Renovables, ya que su principales funciones es realizar el mantenimiento preventivo y correctivo de cada instalación fotovoltaica como asi también realizar instalación de estas.</h3>
+                <div class="col-12 col-sm-12">
+                    <h1>Mi solar</h1>
+                    <h5>Mi Solar es una empresa cual cuenta con especialistas en Energía Renovables, ya que su
+                        principales funciones es realizar el mantenimiento preventivo y correctivo de cada instalación
+                        fotovoltaica como asi también realizar instalación de estas.</h5>
                 </div>
             </div>
         </section>
-        <section class="container">
+        <section class="container" id="servicios">
             <h2>Algunos de Nuestros Servicios</h2>
             <div class="row">
                 <div class="col-12 col-sm-6 mb-3">
                     <div class="card d-flex flex-column">
-                        <img class="card-img-top" src="assets/img/mantenimiento-solar.jpg" alt="">
-                        <div class="card-body mb-3">
+                        <img class="card-img-top" src="assets/img/mantenimiento-solar.jpg"
+                            alt="un hombre limpiando un panel solar">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center mb-3">
                             <h3>Mantenimiento Solar</h3>
-                            <a class="btn btn-secondary" href="https://walink.co/47e288" target="_blank">Enviar Mensaje</a>
+                            <a class="btn btn-secondary rounded-pill mt-3" href="https://walink.co/47e288" target="_blank"><i
+                                    class="fa-brands fa-whatsapp me-2"></i>Enviar Mensaje</a>
+
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 mb-3">
                     <div class="card">
-                        <img class="card-img-top" src="assets/img/paneles.jpg" alt="">
-                        <div class="card-body mb-3">
+                        <img class="card-img-top" src="assets/img/paneles.jpg"
+                            alt="un hombre instalando paneles solares en el techo de una casa">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center mb-3">
                             <h3>Instalación Solar</h3>
-                            <a class="btn btn-secondary" href="https://walink.co/ea0f63" target="_blank">Enviar Mensaje</a>
+                            <a class="btn btn-secondary rounded-pill mt-3" href="https://walink.co/ea0f63" target="_blank"><i
+                                    class="fa-brands fa-whatsapp me-2"></i>Enviar Mensaje</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 mb-3">
                     <div class="card">
-                        <img src="assets/img/logo.png" alt="">
-                        <div class="align-self-center mb-3">
-                            <a class="btn btn-secondary" href="https://walink.co/db6aea" target="_blank">Instalación
-                                Enchufes</a>
+                        <img class="card-img-top" src="assets/img/enchufes.jpg" alt=" un enchufe con tres entradas">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center mb-3">
+                            <h3>Instalación
+                                Enchufes</h3>
+                            <a class="btn btn-secondary rounded-pill mt-3" href="https://walink.co/db6aea" target="_blank"><i
+                                    class="fa-brands fa-whatsapp me-2"></i>Enviar Mensaje</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 mb-3">
                     <div class="card">
-                        <img src="assets/img/logo.png" alt="">
-                        <div class="align-self-center mb-3">
-                            <a class="btn btn-secondary" href="https://walink.co/d5de21" target="_blank">Instalación
-                                Luces</a>
+                        <img class="card-img-top" src="assets/img/luces.jpg" alt="una ampolleta encendida">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center mb-3">
+                            <h3>Instalación
+                                Luces</h3>
+                            <a class="btn btn-secondary rounded-pill mt-3" href="https://walink.co/d5de21" target="_blank"><i
+                                    class="fa-brands fa-whatsapp me-2"></i>Enviar Mensaje</a>
                         </div>
                     </div>
                 </div>
@@ -140,7 +161,27 @@
         </section>
     </main>
     <footer>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <a class="text-decoration-none h5" href="nosotros.html">Nosotros</a>
+                    <a class="text-decoration-none h5" href="#inicio">Inicio</a>
+                    <a class="text-decoration-none h5" href="#servicios">Servicios</a>
+                </div>
+                <div>
+                    <div class="icono">
+                        <i class="fa-brands fa-whatsapp me-2"></i>
+                    </div>
+                    <div class="icono">
+                        <i class="fa-brands fa-whatsapp me-2"></i>
+                    </div>
+                    <div class="icono">
+                        <i class="fa-brands fa-whatsapp me-2"></i>
+                    </div>
+                </div>
 
+            </div>
+        </div>
     </footer>
     <!--escribir aquí-->
 
