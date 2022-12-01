@@ -116,14 +116,44 @@ a {
 }
 
 /*tipografia */
+body {
+  background-color: #ADC5D9;
+}
+
+header {
+  background-color: #3C5473;
+}
+header .nav-link {
+  color: #ADC5D9;
+}
+header .nav-link:hover {
+  background-color: #7595BF;
+  color: #FFFFFF;
+}
+header .active {
+  background-color: #7595BF !important;
+}
+
+main {
+  color: #020200;
+}
+
 footer {
   background-color: #7595BF;
 }
 footer a {
-  color: #ADC5D9;
+  color: #020200;
 }
 footer a:hover {
   color: #BFDC58;
+}
+
+.card {
+  border: #020200 1px solid;
+}
+.card .card-header {
+  background-color: #BFDC58;
+  color: #020200;
 }
 
 .icono {
@@ -136,6 +166,19 @@ footer a:hover {
 .icono:hover {
   background-color: #3C5473;
   color: #BFDC58;
+}
+
+.btn-primary {
+  background-color: #7595BF;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #3C5473;
+}
+
+.btn-secondary {
+  background-color: #3C5473;
 }
 
 /*# sourceMappingURL=style.css.map */

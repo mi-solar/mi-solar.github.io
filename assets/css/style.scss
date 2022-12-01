@@ -1,7 +1,7 @@
 /*variables*/
 $tipografia-proyecto: 'Roboto', sans-serif;
 $fondo-proyecto: #ADC5D9;
-$fondo-secundario-proyecto: #BF988F;
+$fondo-secundario-proyecto: #FFFFFF;
 $color-principal-proyecto: #7595BF;
 $color-secundario-proyecto: #3C5473;
 $letras-proyecto: #020200;
@@ -112,13 +112,39 @@ a {
 }
 
 /*tipografia */
+body{
+    background-color: $fondo-proyecto;
+}
+header{
+    background-color: $color-secundario-proyecto;
+    .nav-link{
+        color: #ADC5D9;
+    }
+    .nav-link:hover{
+        background-color: $color-principal-proyecto;
+        color: $fondo-secundario-proyecto;
+    }
+    .active{
+        background-color: $color-principal-proyecto !important;
+    }
+}
+main{
+    color: $letras-proyecto;
+}
 footer{
     background-color: $color-principal-proyecto;
     a{
-        color: $fondo-proyecto;
+        color: $letras-proyecto;
     }
     a:hover{
         color: $letras-secundario-proyecto;
+    }
+}
+.card{
+    border: $letras-proyecto 1px solid;
+    .card-header{
+        background-color: $letras-secundario-proyecto;
+        color: $letras-proyecto;
     }
 }
 .icono{
@@ -130,4 +156,14 @@ footer{
 .icono:hover{
     background-color: $color-secundario-proyecto;
     color: $letras-secundario-proyecto;
+}
+.btn-primary{
+    background-color: $color-principal-proyecto;
+    border: none;
+}
+.btn-primary:hover{
+    background-color: $color-secundario-proyecto;
+}
+.btn-secondary{
+    background-color: $color-secundario-proyecto;
 }
