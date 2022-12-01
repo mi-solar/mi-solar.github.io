@@ -182,7 +182,13 @@ footer a:hover {
 }
 
 .btn-secondary {
+  border: none;
   background-color: #3C5473;
+}
+
+.btn-secondary:hover {
+  background-color: #BFDC58;
+  color: #3C5473;
 }
 
 /*# sourceMappingURL=style.css.map */

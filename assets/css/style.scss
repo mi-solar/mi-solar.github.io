@@ -168,5 +168,10 @@ footer{
     background-color: $color-secundario-proyecto;
 }
 .btn-secondary{
+    border: none;
     background-color: $color-secundario-proyecto;
+}
+.btn-secondary:hover{
+    background-color: $letras-secundario-proyecto;
+    color: $color-secundario-proyecto;
 }
