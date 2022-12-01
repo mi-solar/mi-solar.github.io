@@ -156,6 +156,10 @@ footer a:hover {
   color: #020200;
 }
 
+.navbar-toggler {
+  background-color: #BFDC58;
+}
+
 .icono {
   background-color: #ADC5D9;
   color: #020200;
