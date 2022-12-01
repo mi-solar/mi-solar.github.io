@@ -116,5 +116,26 @@ a {
 }
 
 /*tipografia */
+footer {
+  background-color: #7595BF;
+}
+footer a {
+  color: #ADC5D9;
+}
+footer a:hover {
+  color: #BFDC58;
+}
+
+.icono {
+  background-color: #ADC5D9;
+  color: #020200;
+  height: 50px;
+  width: 50px;
+}
+
+.icono:hover {
+  background-color: #3C5473;
+  color: #BFDC58;
+}
 
 /*# sourceMappingURL=style.css.map */

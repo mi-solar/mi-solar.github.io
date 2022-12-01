@@ -1,11 +1,11 @@
 /*variables*/
 $tipografia-proyecto: 'Roboto', sans-serif;
-$fondo-proyecto: #FFFFFF;
-$fondo-secundario-proyecto: #D2320E;
-$color-principal-proyecto: #990D00;
-$color-secundario-proyecto: #331C17;
-$letras-proyecto: #FFFFFF;
-$letras-secundario-proyecto: #fff3dc;
+$fondo-proyecto: #ADC5D9;
+$fondo-secundario-proyecto: #BF988F;
+$color-principal-proyecto: #7595BF;
+$color-secundario-proyecto: #3C5473;
+$letras-proyecto: #020200;
+$letras-secundario-proyecto: #BFDC58;
 /*variables*/
 
 /*mixins*/
@@ -112,3 +112,22 @@ a {
 }
 
 /*tipografia */
+footer{
+    background-color: $color-principal-proyecto;
+    a{
+        color: $fondo-proyecto;
+    }
+    a:hover{
+        color: $letras-secundario-proyecto;
+    }
+}
+.icono{
+    background-color: $fondo-proyecto;
+    color: $letras-proyecto;
+    height: 50px;
+    width: 50px;
+}
+.icono:hover{
+    background-color: $color-secundario-proyecto;
+    color: $letras-secundario-proyecto;
+}
