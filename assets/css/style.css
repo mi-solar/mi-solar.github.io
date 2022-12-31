@@ -191,4 +191,15 @@ footer a:hover {
   color: #3C5473;
 }
 
+.circulo {
+  background-color: #3C5473;
+  height: 200px;
+  width: 200px;
+}
+
+.fa-user {
+  font-size: 150px;
+  color: #FFFFFF;
+}
+
 /*# sourceMappingURL=style.css.map */
