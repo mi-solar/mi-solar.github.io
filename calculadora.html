@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,28 +19,29 @@
         }
     </script>
 </head>
-
 <body>
     <div class="container mt-3">
         <div class="row">
-            <form class="col-12 col-sm-6 card">
-                <div class="card-body container-fluid">
-                    <h1>Calculadora de Sombras</h1>
-                    <div class="row">
-                        <div class="col-12 col-sm-6 mt-2">
-                            <label class="form-label" for="largo">Largo objeto</label>
-                            <input class="form-control" type="number" id="largo" name="largo">
+            <form class="col-12 col-sm-6">
+                <div class="card">
+                    <div class="card-body container-fluid">
+                        <h1>Calculadora de Sombras</h1>
+                        <div class="row">
+                            <div class="col-12 col-sm-6 mt-2">
+                                <label class="form-label" for="largo">Largo objeto</label>
+                                <input class="form-control" type="number" id="largo" name="largo">
+                            </div>
+                            <div class="col-12 col-sm-6 mt-2">
+                                <label class="form-label" for="grado">Angulo del Sol</label>
+                                <input class="form-control" type="number" id="grado" name="grado">
+                            </div>
+                            <div class="col-12 col-sm-12 mt-2">
+                                <label class="form-label" for="angulo">Ángulo de Objeto</label>
+                                <input class="form-control" type="number" id="angulo" name="angulo">
+                            </div>
                         </div>
-                        <div class="col-12 col-sm-6 mt-2">
-                            <label class="form-label" for="grado">Angulo del Sol</label>
-                            <input class="form-control" type="number" id="grado" name="grado">
-                        </div>
-                        <div class="col-12 col-sm-12 mt-2">
-                            <label class="form-label" for="angulo">Ángulo de Objeto</label>
-                            <input class="form-control" type="number" id="angulo" name="angulo">
-                        </div>
+                        <button class="btn btn-primary mt-2" type="button" onclick="sombra()">Calcular sombra</button>
                     </div>
-                    <button class="btn btn-primary mt-2" type="button" onclick="sombra()">Calcular sombra</button>
                 </div>
             </form>
         </div>
@@ -51,5 +51,4 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
