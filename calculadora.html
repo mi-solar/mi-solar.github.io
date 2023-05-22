@@ -18,21 +18,21 @@
             var angulo = Number(document.getElementById("angulo").value);
 
             var resultado = largo * (Math.sin((grado + angulo) * Math.PI / 180) / Math.sin(grado * Math.PI / 180));
-            resultado = Math.round(resultado)+" cm";
+            resultado = Math.round(resultado) + " cm";
             document.getElementById("resultado").value = resultado;
         }
         function potencia() {
             var voltaje = Number(document.getElementById("voltaje").value);
             var corriente = Number(document.getElementById("corriente").value);
             var resultado2 = voltaje * corriente;
-            var resultado = Math.round(resultado2)+" W";
+            var resultado = Math.round(resultado2) + " W";
             document.getElementById("resultado2").value = resultado;
         }
         function corriente() {
             var potencia = Number(document.getElementById("potencia").value);
             var voltaje = Number(document.getElementById("voltaje2").value);
             var resultado3 = potencia / voltaje;
-            var resultado = Math.round(resultado3)+" A";
+            var resultado = Math.round(resultado3) + " A";
             document.getElementById("resultado3").value = resultado;
         }
         function conductor() {
@@ -108,8 +108,82 @@
             } else {
                 resultado = 0;
             }
-            var resultado = resultado+" mm²";
+            var resultado = resultado + " mm²";
             document.getElementById("resultado4").value = resultado;
+        }
+        function conductor2() {
+            var corriente = Number(document.getElementById("corriente3").value);
+            if (corriente <= 17) {
+                valor = 1.5;
+            } else if (corriente <= 21) {
+                valor = 2.08;
+            } else if (corriente <= 23) {
+                valor = 2.5;
+            } else if (corriente <= 28) {
+                valor = 3.31;
+            } else if (corriente <= 31) {
+                valor = 4;
+            } else if (corriente <= 37) {
+                valor = 5.26;
+            } else if (corriente <= 40) {
+                valor = 6;
+            } else if (corriente <= 49) {
+                valor = 8.37;
+            } else if (corriente <= 54) {
+                valor = 10;
+            } else if (corriente <= 65) {
+                valor = 13.3;
+            } else if (corriente <= 73) {
+                valor = 16;
+            } else if (corriente <= 86) {
+                valor = 21.1;
+            }else if (corriente <= 95) {
+                valor = 25;
+            } else if (corriente <= 99) {
+                valor = 26.7;
+            } else if (corriente <= 114) {
+                valor = 33.6;
+            } else if (corriente <= 117) {
+                valor = 35;
+            } else if (corriente <= 132) {
+                valor = 42.4;
+            } else if (corriente <= 141) {
+                valor = 50;
+            } else if (corriente <= 152) {
+                valor = 53.5;
+            } else if (corriente <= 175) {
+                valor = 67.4;
+            } else if (corriente <= 179) {
+                valor = 70;
+            } else if (corriente <= 201) {
+                valor = 85;
+            } else if (corriente <= 216) {
+                valor = 95;
+            } else if (corriente <= 232) {
+                valor = 107.2;
+            } else if (corriente <= 249) {
+                valor = 120;
+            } else if (corriente <= 257) {
+                valor = 126.7;
+            } else if (corriente <= 285) {
+                valor = 150;
+            } else if (corriente <= 287) {
+                valor = 152;
+            } else if (corriente <= 316) {
+                valor = 177.3;
+            } else if (corriente <= 324) {
+                valor = 185;
+            } else if (corriente <= 342) {
+                valor = 202.7;
+            } else if (corriente <= 380) {
+                valor = 240;
+            } else if (corriente <= 392) {
+                valor = 253.3;
+            } else if (corriente <= 435) {
+                valor = 300;
+            }
+            var resultado = valor + " mm²";
+            document.getElementById("resultado5").value = resultado;
         }
 
     </script>
@@ -132,15 +206,17 @@
                         <input class="form-control" type="text" id="resultado" name="resultado" disabled>
                         <div class="row">
                             <div class="col-4">
-                                <button class="btn btn-primary mt-2" type="button" onclick="sombra()">Calcular Sombra</button>
+                                <button class="btn btn-primary mt-2" type="button" onclick="sombra()">Calcular
+                                    Sombra</button>
                             </div>
                             <div class="col-4">
-                                <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form1')">Borrar
+                                <button class="btn btn-secondary mt-2" type="button"
+                                    onclick="borrarDatos('form1')">Borrar
                                     Datos</button>
                             </div>
                             <div class="col-4 d-flex justify-content-center align-items-center">
                                 <div><img class="w-100" src="assets/img/logo.png" alt="logo mi solar"></div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -158,15 +234,17 @@
                         <input class="form-control" type="text" id="resultado2" name="resultado2" disabled>
                         <div class="row">
                             <div class="col-4">
-                                <button class="btn btn-primary mt-2" type="button" onclick="potencia()">Calcular Potencia</button>
+                                <button class="btn btn-primary mt-2" type="button" onclick="potencia()">Calcular
+                                    Potencia</button>
                             </div>
                             <div class="col-4">
-                                <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form2')">Borrar
+                                <button class="btn btn-secondary mt-2" type="button"
+                                    onclick="borrarDatos('form2')">Borrar
                                     Datos</button>
                             </div>
                             <div class="col-4 d-flex justify-content-center align-items-center">
                                 <div><img class="w-100" src="assets/img/logo.png" alt="logo mi solar"></div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -184,15 +262,17 @@
                         <input class="form-control" type="text" id="resultado3" name="resultado3" disabled>
                         <div class="row">
                             <div class="col-4">
-                                <button class="btn btn-primary mt-2" type="button" onclick="corriente()">Calcular Corriente</button>
+                                <button class="btn btn-primary mt-2" type="button" onclick="corriente()">Calcular
+                                    Corriente</button>
                             </div>
                             <div class="col-4">
-                                <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form3')">Borrar
+                                <button class="btn btn-secondary mt-2" type="button"
+                                    onclick="borrarDatos('form3')">Borrar
                                     Datos</button>
                             </div>
                             <div class="col-4 d-flex justify-content-center align-items-center">
                                 <div><img class="w-100" src="assets/img/logo.png" alt="logo mi solar"></div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -205,18 +285,44 @@
                         <label class="form-label" for="largo">Corriente</label>
                         <input class="form-control" type="number" id="corriente2" name="corriente2" min="0">
                         <label class="form-label" for="resultado">Sección Conductor</label>
-                        <input class="form-control" type="text" id="resultado4" name="resultado4" disabled >
+                        <input class="form-control" type="text" id="resultado4" name="resultado4" disabled>
                         <div class="row">
                             <div class="col-4">
-                                <button class="btn btn-primary mt-2" type="button" onclick="conductor()">Calcular</button>
+                                <button class="btn btn-primary mt-2" type="button"
+                                    onclick="conductor()">Calcular</button>
                             </div>
                             <div class="col-4">
-                                <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form4')">Borrar
+                                <button class="btn btn-secondary mt-2" type="button"
+                                    onclick="borrarDatos('form4')">Borrar
                                     Datos</button>
                             </div>
                             <div class="col-4 d-flex justify-content-center align-items-center">
                                 <div><img class="w-100" src="assets/img/logo.png" alt="logo mi solar"></div>
-                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form class="col-12 col-sm-4 mt-3 mb-2" id="form5">
+                <div class="card">
+                    <div class="card-body container-fluid">
+                        <h1>Calculadora Sección Conductor THHN, RV, RV-K, RZ1, RZ1-K.</h1>
+                        <label class="form-label" for="largo">Corriente</label>
+                        <input class="form-control" type="number" id="corriente3" name="corriente3" min="0">
+                        <label class="form-label" for="resultado">Sección Conductor</label>
+                        <input class="form-control" type="text" id="resultado5" name="resultado5" disabled>
+                        <div class="row">
+                            <div class="col-4">
+                                <button class="btn btn-primary mt-2" type="button"
+                                    onclick="conductor2()">Calcular</button>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-secondary mt-2" type="button"
+                                    onclick="borrarDatos('form5')">Borrar
+                                    Datos</button>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                <div><img class="w-100" src="assets/img/logo.png" alt="logo mi solar"></div>
                             </div>
                         </div>
                     </div>
