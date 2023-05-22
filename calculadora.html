@@ -23,6 +23,7 @@
         }
     </script>
 </head>
+
 <body>
     <div class="container mt-3">
         <div class="row">
@@ -30,16 +31,17 @@
                 <div class="card">
                     <div class="card-body container-fluid">
                         <h1>Calculadora de Sombras</h1>
-                                <label class="form-label" for="largo">Largo objeto</label>
-                                <input class="form-control" type="number" id="largo" name="largo" min="0">
-                                <label class="form-label" for="grado">Angulo del Sol</label>
-                                <input class="form-control" type="number" id="grado" name="grado" min="0">
-                                <label class="form-label" for="angulo">Ángulo de Objeto</label>
-                                <input class="form-control" type="number" id="angulo" name="angulo" min="0">
-                                <label class="form-label" for="resultado">Resultado</label>
-                                <input class="form-control" type="number" id="resultado" name="resultado" disabled>
+                        <label class="form-label" for="largo">Largo objeto</label>
+                        <input class="form-control" type="number" id="largo" name="largo" min="0">
+                        <label class="form-label" for="grado">Angulo del Sol</label>
+                        <input class="form-control" type="number" id="grado" name="grado" min="0">
+                        <label class="form-label" for="angulo">Ángulo de Objeto</label>
+                        <input class="form-control" type="number" id="angulo" name="angulo" min="0">
+                        <label class="form-label" for="resultado">Resultado</label>
+                        <input class="form-control" type="number" id="resultado" name="resultado" disabled>
                         <button class="btn btn-primary mt-2" type="button" onclick="sombra()">Calcular Sombra</button>
-                        <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form1')">Borrar Datos</button>
+                        <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form1')">Borrar
+                            Datos</button>
                     </div>
                 </div>
             </form>
