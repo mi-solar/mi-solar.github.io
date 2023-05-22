@@ -21,13 +21,27 @@
             resultado = Math.round(resultado);
             document.getElementById("resultado").value = resultado;
         }
+        function potencia() {
+            var voltaje = Number(document.getElementById("voltaje").value);
+            var corriente = Number(document.getElementById("corriente").value);
+            var resultado2 = voltaje * corriente;
+            var resultado = Math.round(resultado2);
+            document.getElementById("resultado2").value = resultado;
+        }
+        function corriente() {
+            var potencia = Number(document.getElementById("potencia").value);
+            var voltaje = Number(document.getElementById("voltaje2").value);
+            var resultado3 = potencia / voltaje;
+            var resultado = Math.round(resultado3);
+            document.getElementById("resultado3").value = resultado;
+        }
     </script>
 </head>
 
 <body>
     <div class="container mt-3">
         <div class="row">
-            <form class="col-12 col-sm-4" id="form1">
+            <form class="col-12 col-sm-4 mt-3 mb-2" id="form1">
                 <div class="card">
                     <div class="card-body container-fluid">
                         <h1>Calculadora de Sombras</h1>
@@ -41,6 +55,57 @@
                         <input class="form-control" type="number" id="resultado" name="resultado" disabled>
                         <button class="btn btn-primary mt-2" type="button" onclick="sombra()">Calcular Sombra</button>
                         <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form1')">Borrar
+                            Datos</button>
+                    </div>
+                </div>
+            </form>
+            <form class="col-12 col-sm-4 mt-3 mb-2" id="form2">
+                <div class="card">
+                    <div class="card-body container-fluid">
+                        <h1>Calculadora de Potencia</h1>
+                        <label class="form-label" for="largo">Voltaje</label>
+                        <input class="form-control" type="number" id="voltaje" name="voltaje" min="0">
+                        <label class="form-label" for="grado">Corriente</label>
+                        <input class="form-control" type="number" id="corriente" name="corriente" min="0">
+                        <label class="form-label" for="resultado">Potencia</label>
+                        <input class="form-control" type="number" id="resultado2" name="reultado2" disabled>
+                        <button class="btn btn-primary mt-2" type="button" onclick="potencia()">Calcular
+                            Potencia</button>
+                        <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form2')">Borrar
+                            Datos</button>
+                    </div>
+                </div>
+            </form>
+            <form class="col-12 col-sm-4 mt-3 mb-2" id="form3">
+                <div class="card">
+                    <div class="card-body container-fluid">
+                        <h1>Calculadora de Corriente</h1>
+                        <label class="form-label" for="largo">Potencia</label>
+                        <input class="form-control" type="number" id="potencia" name="potencia" min="0">
+                        <label class="form-label" for="grado">Voltaje</label>
+                        <input class="form-control" type="number" id="voltaje2" name="voltaje2" min="0">
+                        <label class="form-label" for="resultado">Corriente</label>
+                        <input class="form-control" type="number" id="resultado3" name="resultado3" disabled>
+                        <button class="btn btn-primary mt-2" type="button" onclick="corriente()">Calcular
+                            Corriente</button>
+                        <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form3')">Borrar
+                            Datos</button>
+                    </div>
+                </div>
+            </form>
+            <form class="col-12 col-sm-4 mt-3 mb-2" id="form3">
+                <div class="card">
+                    <div class="card-body container-fluid">
+                        <h1>Calculadora de Corriente</h1>
+                        <label class="form-label" for="largo">Potencia</label>
+                        <input class="form-control" type="number" id="potencia" name="potencia" min="0">
+                        <label class="form-label" for="grado">Voltaje</label>
+                        <input class="form-control" type="number" id="voltaje2" name="voltaje2" min="0">
+                        <label class="form-label" for="resultado">Corriente</label>
+                        <input class="form-control" type="number" id="resultado3" name="resultado3" disabled>
+                        <button class="btn btn-primary mt-2" type="button" onclick="corriente()">Calcular
+                            Corriente</button>
+                        <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form3')">Borrar
                             Datos</button>
                     </div>
                 </div>
