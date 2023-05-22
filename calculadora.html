@@ -17,22 +17,22 @@
             var grado = Number(document.getElementById("grado").value);
             var angulo = Number(document.getElementById("angulo").value);
 
-            var resultado = largo * (Math.sin((grado + angulo) * Math.PI / 180) / Math.sin(grado * Math.PI / 180))
-            resultado = Math.round(resultado);
+            var resultado = largo * (Math.sin((grado + angulo) * Math.PI / 180) / Math.sin(grado * Math.PI / 180));
+            resultado = Math.round(resultado)+" cm";
             document.getElementById("resultado").value = resultado;
         }
         function potencia() {
             var voltaje = Number(document.getElementById("voltaje").value);
             var corriente = Number(document.getElementById("corriente").value);
             var resultado2 = voltaje * corriente;
-            var resultado = Math.round(resultado2);
+            var resultado = Math.round(resultado2)+" W";
             document.getElementById("resultado2").value = resultado;
         }
         function corriente() {
             var potencia = Number(document.getElementById("potencia").value);
             var voltaje = Number(document.getElementById("voltaje2").value);
             var resultado3 = potencia / voltaje;
-            var resultado = Math.round(resultado3);
+            var resultado = Math.round(resultado3)+" A";
             document.getElementById("resultado3").value = resultado;
         }
         function conductor() {
@@ -129,10 +129,20 @@
                         <label class="form-label" for="angulo">Ángulo de Objeto</label>
                         <input class="form-control" type="number" id="angulo" name="angulo" min="0">
                         <label class="form-label" for="resultado">Resultado</label>
-                        <input class="form-control" type="number" id="resultado" name="resultado" disabled>
-                        <button class="btn btn-primary mt-2" type="button" onclick="sombra()">Calcular Sombra</button>
-                        <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form1')">Borrar
-                            Datos</button>
+                        <input class="form-control" type="text" id="resultado" name="resultado" disabled>
+                        <div class="row">
+                            <div class="col-4">
+                                <button class="btn btn-primary mt-2" type="button" onclick="sombra()">Calcular Sombra</button>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form1')">Borrar
+                                    Datos</button>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                <div><img class="w-100" src="assets/img/logo.png" alt="logo mi solar"></div>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -145,11 +155,20 @@
                         <label class="form-label" for="grado">Corriente</label>
                         <input class="form-control" type="number" id="corriente" name="corriente" min="0">
                         <label class="form-label" for="resultado">Potencia</label>
-                        <input class="form-control" type="number" id="resultado2" name="reultado2" disabled>
-                        <button class="btn btn-primary mt-2" type="button" onclick="potencia()">Calcular
-                            Potencia</button>
-                        <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form2')">Borrar
-                            Datos</button>
+                        <input class="form-control" type="text" id="resultado2" name="resultado2" disabled>
+                        <div class="row">
+                            <div class="col-4">
+                                <button class="btn btn-primary mt-2" type="button" onclick="potencia()">Calcular Sombra</button>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form2')">Borrar
+                                    Datos</button>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                <div><img class="w-100" src="assets/img/logo.png" alt="logo mi solar"></div>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -162,11 +181,20 @@
                         <label class="form-label" for="grado">Voltaje</label>
                         <input class="form-control" type="number" id="voltaje2" name="voltaje2" min="0">
                         <label class="form-label" for="resultado">Corriente</label>
-                        <input class="form-control" type="number" id="resultado3" name="resultado3" disabled>
-                        <button class="btn btn-primary mt-2" type="button" onclick="corriente()">Calcular
-                            Corriente</button>
-                        <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form3')">Borrar
-                            Datos</button>
+                        <input class="form-control" type="text" id="resultado3" name="resultado3" disabled>
+                        <div class="row">
+                            <div class="col-4">
+                                <button class="btn btn-primary mt-2" type="button" onclick="corriente()">Calcular Sombra</button>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form3')">Borrar
+                                    Datos</button>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                <div><img class="w-100" src="assets/img/logo.png" alt="logo mi solar"></div>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -178,10 +206,19 @@
                         <input class="form-control" type="number" id="corriente2" name="corriente2" min="0">
                         <label class="form-label" for="resultado">Sección Conductor</label>
                         <input class="form-control" type="text" id="resultado4" name="resultado4" disabled >
-                        <button class="btn btn-primary mt-2" type="button" onclick="conductor()">Calcular
-                            Corriente</button>
-                        <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form4')">Borrar
-                            Datos</button>
+                        <div class="row">
+                            <div class="col-4">
+                                <button class="btn btn-primary mt-2" type="button" onclick="conductor()">Calcular Sombra</button>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-secondary mt-2" type="button" onclick="borrarDatos('form4')">Borrar
+                                    Datos</button>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                <div><img class="w-100" src="assets/img/logo.png" alt="logo mi solar"></div>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </form>
