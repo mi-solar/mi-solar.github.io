@@ -12,10 +12,9 @@
             var largo = Number(document.getElementById("largo").value);
             var grado = Number(document.getElementById("grado").value);
             var angulo = Number(document.getElementById("angulo").value);
-
             var resultado = largo * (Math.sin((grado + angulo) * Math.PI / 180) / Math.sin(grado * Math.PI / 180))
             resultado = Math.round(resultado);
-            document.write('<h1>' + (Math.round(resultado)) + '</h1>');
+            document.getElementById("resultado").value = resultado;
         }
     </script>
 </head>
@@ -39,6 +38,10 @@
                                 <label class="form-label" for="angulo">Ángulo de Objeto</label>
                                 <input class="form-control" type="number" id="angulo" name="angulo">
                             </div>
+                            <div class="col-12 col-sm-12 mt-2 resultado">
+                                <label class="form-label" for="resultado">Resultado</label>
+                                <input class="form-control" type="number" id="resultado" name="resultado" disabled>
+                            </div>
                         </div>
                         <button class="btn btn-primary mt-2" type="button" onclick="sombra()">Calcular sombra</button>
                     </div>
@@ -46,7 +49,6 @@
             </form>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
