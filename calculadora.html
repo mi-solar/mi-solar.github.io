@@ -193,78 +193,336 @@
                 (C25 <= 1.5 && C24 === 3) ||
                 (C25 <= 1.5 && C24 === 4) ||
                 (C25 <= 1.5 && C24 === 5)) {
-                valor= 16;
+                valor = 16;
             } else if ((C25 <= 2.5 && C24 === 1) ||
                 (C25 <= 2.5 && C24 === 2) ||
                 (C25 <= 2.5 && C24 === 3) ||
                 (C25 <= 2.5 && C24 === 4) ||
                 (C25 <= 2.5 && C24 === 5)) {
-                valor= 20;
+                valor = 20;
             } else if ((C25 <= 4 && C24 === 1) ||
                 (C25 <= 4 && C24 === 2) ||
                 (C25 <= 4 && C24 === 3) ||
                 (C25 <= 4 && C24 === 4) ||
                 (C25 <= 4 && C24 === 5)) {
-                valor= 25;
+                valor = 25;
             } else if ((C25 <= 6 && C24 === 1) ||
                 (C25 <= 6 && C24 === 2) ||
                 (C25 <= 6 && C24 === 3) ||
                 (C25 <= 6 && C24 === 4) ||
                 (C25 <= 6 && C24 === 5)) {
-                valor= 25;
+                valor = 25;
             } else if ((C25 <= 10 && C24 === 1) ||
                 (C25 <= 10 && C24 === 2) ||
                 (C25 <= 10 && C24 === 3) ||
                 (C25 <= 10 && C24 === 4) ||
                 (C25 <= 10 && C24 === 5)) {
-                valor= 32;
+                valor = 32;
             } else if ((C25 <= 16 && C24 === 1) ||
                 (C25 <= 16 && C24 === 2) ||
                 (C25 <= 16 && C24 === 3) ||
                 (C25 <= 16 && C24 === 4) ||
                 (C25 <= 16 && C24 === 5)) {
-                valor= 40;
+                valor = 40;
             } else if ((C25 <= 25 && C24 === 1) ||
                 (C25 <= 25 && C24 === 2) ||
                 (C25 <= 25 && C24 === 3) ||
                 (C25 <= 25 && C24 === 4) ||
                 (C25 <= 25 && C24 === 5)) {
-                valor= 50;
+                valor = 50;
             } else if ((C25 <= 35 && C24 === 1) ||
                 (C25 <= 35 && C24 === 2) ||
                 (C25 <= 35 && C24 === 3) ||
                 (C25 <= 35 && C24 === 4) ||
                 (C25 <= 35 && C24 === 5)) {
-                valor= 50;
+                valor = 50;
             } else if ((C25 <= 50 && C24 === 1) ||
                 (C25 <= 50 && C24 === 2) ||
                 (C25 <= 50 && C24 === 3) ||
                 (C25 <= 50 && C24 === 4) ||
                 (C25 <= 50 && C24 === 5)) {
-                valor= 63;
+                valor = 63;
             } else if ((C25 <= 70 && C24 === 1) ||
                 (C25 <= 70 && C24 === 2) ||
                 (C25 <= 70 && C24 === 3) ||
                 (C25 <= 70 && C24 === 4) ||
                 (C25 <= 70 && C24 === 5)) {
-                valor= 75;
+                valor = 75;
             } else if ((C25 <= 95 && C24 === 1) ||
                 (C25 <= 95 && C24 === 2) ||
                 (C25 <= 95 && C24 === 3) ||
                 (C25 <= 95 && C24 === 4) ||
                 (C25 <= 95 && C24 === 5)) {
-                valor= 100;
+                valor = 100;
             } else if ((C25 <= 120 && C24 === 1) ||
                 (C25 <= 120 && C24 === 2) ||
                 (C25 <= 120 && C24 === 3) ||
                 (C25 <= 120 && C24 === 4) ||
                 (C25 <= 120 && C24 === 5)) {
-                valor= 100;
+                valor = 100;
             } else {
-                valor= 0;
+                valor = 0;
             }
             var resultado = valor + " mm";
             document.getElementById("resultado6").value = resultado;
+        }
+        function ductof() {
+            var C30 = Number(document.getElementById("cantCables").value);
+            var C31 = Number(document.getElementById("seccConductor").value);
+            if (C31 <= 1.5 && C30 === 1) {
+                result = 16;
+            } else if (C31 <= 1.5 && C30 === 2) {
+                result = 16;
+            } else if (C31 <= 1.5 && C30 === 3) {
+                result = 16;
+            } else if (C31 <= 1.5 && C30 === 4) {
+                result = 20;
+            } else if (C31 <= 1.5 && C30 === 5) {
+                result = 25;
+            } else if (C31 <= 2.5 && C30 === 1) {
+                result = 16;
+            } else if (C31 <= 2.5 && C30 === 2) {
+                result = 20;
+            } else if (C31 <= 2.5 && C30 === 3) {
+                result = 20;
+            } else if (C31 <= 2.5 && C30 === 4) {
+                result = 32;
+            } else if (C31 <= 2.5 && C30 === 5) {
+                result = 32;
+            } else if (C31 <= 4 && C30 === 1) {
+                result = 16;
+            } else if (C31 <= 4 && C30 === 2) {
+                result = 25;
+            } else if (C31 <= 4 && C30 === 3) {
+                result = 25;
+            } else if (C31 <= 4 && C30 === 4) {
+                result = 32;
+            } else if (C31 <= 4 && C30 === 5) {
+                result = 40;
+            } else if (C31 <= 6 && C30 === 1) {
+                result = 16;
+            } else if (C31 <= 6 && C30 === 2) {
+                result = 25;
+            } else if (C31 <= 6 && C30 === 3) {
+                result = 32;
+            } else if (C31 <= 6 && C30 === 4) {
+                result = 32;
+            } else if (C31 <= 6 && C30 === 5) {
+                result = 40;
+            } else if (C31 <= 10 && C30 === 1) {
+                result = 20;
+            } else if (C31 <= 10 && C30 === 2) {
+                result = 32;
+            } else if (C31 <= 10 && C30 === 3) {
+                result = 32;
+            } else if (C31 <= 10 && C30 === 4) {
+                result = 40;
+            } else if (C31 <= 10 && C30 === 5) {
+                result = 50;
+            } else if (C31 <= 16 && C30 === 1) {
+                result = 25;
+            } else if (C31 <= 16 && C30 === 2) {
+                result = 32;
+            } else if (C31 <= 16 && C30 === 3) {
+                result = 40;
+            } else if (C31 <= 16 && C30 === 4) {
+                result = 50;
+            } else if (C31 <= 16 && C30 === 5) {
+                result = 50;
+            } else if (C31 <= 25 && C30 === 1) {
+                result = 25;
+            } else if (C31 <= 25 && C30 === 2) {
+                result = 40;
+            } else if (C31 <= 25 && C30 === 3) {
+                result = 50;
+            } else if (C31 <= 25 && C30 === 4) {
+                result = 50;
+            } else if (C31 <= 25 && C30 === 5) {
+                result = 63;
+            } else if (C31 <= 35 && C30 === 1) {
+                result = 32;
+            } else if (C31 <= 35 && C30 === 2) {
+                result = 40;
+            } else if (C31 <= 35 && C30 === 3) {
+                result = 50;
+            } else if (C31 <= 35 && C30 === 4) {
+                result = 63;
+            } else if (C31 <= 35 && C30 === 5) {
+                result = 63;
+            } else if (C31 <= 50 && C30 === 1) {
+                result = 32;
+            } else if (C31 <= 50 && C30 === 2) {
+                result = 50;
+            } else if (C31 <= 50 && C30 === 3) {
+                result = 63;
+            } else if (C31 <= 50 && C30 === 4) {
+                result = 63;
+            } else if (C31 <= 50 && C30 === 5) {
+                result = 75;
+            } else if (C31 <= 70 && C30 === 1) {
+                result = 40;
+            } else if (C31 <= 70 && C30 === 2) {
+                result = 50;
+            } else if (C31 <= 70 && C30 === 3) {
+                result = 63;
+            } else if (C31 <= 70 && C30 === 4) {
+                result = 75;
+            } else if (C31 <= 70 && C30 === 5) {
+                result = 75;
+            } else if (C31 <= 95 && C30 === 1) {
+                result = 40;
+            } else if (C31 <= 95 && C30 === 2) {
+                result = 63;
+            } else if (C31 <= 95 && C30 === 3) {
+                result = 75;
+            } else if (C31 <= 95 && C30 === 4) {
+                result = 100;
+            } else if (C31 <= 95 && C30 === 5) {
+                result = 100;
+            } else if (C31 <= 120 && C30 === 1) {
+                result = 50;
+            } else if (C31 <= 120 && C30 === 2) {
+                result = 63;
+            } else if (C31 <= 120 && C30 === 3) {
+                result = 75;
+            } else if (C31 <= 120 && C30 === 4) {
+                result = 100;
+            } else if (C31 <= 120 && C30 === 5) {
+                result = 100;
+            } else {
+                result = 0;
+            }
+            var resultado = result + " mm";
+            document.getElementById("resultado7").value = resultado;
+        }
+        function ductoSub() {
+            var C36 = Number(document.getElementById("canCables").value);
+            var C37 = Number(document.getElementById("seccConducto").value);
+            if (C37 <= 1.5 && C36 == 1) {
+                valor = 25;
+            } else if (C37 <= 1.5 && C36 == 2) {
+                valor = 25;
+            } else if (C37 <= 1.5 && C36 == 3) {
+                valor = 25;
+            } else if (C37 <= 1.5 && C36 == 4) {
+                valor = 32;
+            } else if (C37 <= 1.5 && C36 == 5) {
+                valor = 32;
+            } else if (C37 <= 2.5 && C36 == 1) {
+                valor = 25;
+            } else if (C37 <= 2.5 && C36 == 2) {
+                valor = 25;
+            } else if (C37 <= 2.5 && C36 == 3) {
+                valor = 32;
+            } else if (C37 <= 2.5 && C36 == 4) {
+                valor = 32;
+            } else if (C37 <= 2.5 && C36 == 5) {
+                valor = 40;
+            } else if (C37 <= 4 && C36 == 1) {
+                valor = 25;
+            } else if (C37 <= 4 && C36 == 2) {
+                valor = 32;
+            } else if (C37 <= 4 && C36 == 3) {
+                valor = 40;
+            } else if (C37 <= 4 && C36 == 4) {
+                valor = 40;
+            } else if (C37 <= 4 && C36 == 5) {
+                valor = 40;
+            } else if (C37 <= 6 && C36 == 1) {
+                valor = 32;
+            } else if (C37 <= 6 && C36 == 2) {
+                valor = 32;
+            } else if (C37 <= 6 && C36 == 3) {
+                valor = 50;
+            } else if (C37 <= 6 && C36 == 4) {
+                valor = 50;
+            } else if (C37 <= 6 && C36 == 5) {
+                valor = 50;
+            } else if (C37 <= 10 && C36 == 1) {
+                valor = 40;
+            } else if (C37 <= 10 && C36 == 2) {
+                valor = 50;
+            } else if (C37 <= 10 && C36 == 3) {
+                valor = 63;
+            } else if (C37 <= 10 && C36 == 4) {
+                valor = 63;
+            } else if (C37 <= 10 && C36 == 5) {
+                valor = 63;
+            } else if (C37 <= 16 && C36 == 1) {
+                valor = 50;
+            } else if (C37 <= 16 && C36 == 2) {
+                valor = 50;
+            } else if (C37 <= 16 && C36 == 3) {
+                valor = 63;
+            } else if (C37 <= 16 && C36 == 4) {
+                valor = 63;
+            } else if (C37 <= 16 && C36 == 5) {
+                valor = 63;
+            } else if (C37 <= 25 && C36 == 1) {
+                valor = 63;
+            } else if (C37 <= 25 && C36 == 2) {
+                valor = 63;
+            } else if (C37 <= 25 && C36 == 3) {
+                valor = 75;
+            } else if (C37 <= 25 && C36 == 4) {
+                valor = 75;
+            } else if (C37 <= 25 && C36 == 5) {
+                valor = 75;
+            } else if (C37 <= 35 && C36 == 1) {
+                valor = 63;
+            } else if (C37 <= 35 && C36 == 2) {
+                valor = 75;
+            } else if (C37 <= 35 && C36 == 3) {
+                valor = 75;
+            } else if (C37 <= 35 && C36 == 4) {
+                valor = 90;
+            } else if(C37 <= 35 && C36 == 5) {
+                valor = 90;
+            } else if (C37 <= 50 && C36 == 1) {
+                valor = 75;
+            } else if (C37 <= 50 && C36 == 2) {
+                valor = 75;
+            } else if (C37 <= 50 && C36 == 3) {
+                valor = 90;
+            } else if (C37 <= 50 && C36 == 4) {
+                valor = 90;
+            } else if (C37 <= 50 && C36 == 5) {
+                valor = 110;
+            } else if (C37 <= 70 && C36 == 1) {
+                valor = 90;
+            } else if (C37 <= 70 && C36 == 2) {
+                valor = 90;
+            } else if (C37 <= 70 && C36 == 3) {
+                valor = 110;
+            } else if (C37 <= 70 && C36 == 4) {
+                valor = 110;
+            } else if (C37 <= 70 && C36 == 5) {
+                valor = 110;
+            } else if (C37 <= 95 && C36 == 1) {
+                valor = 110;
+            } else if (C37 <= 95 && C36 == 2) {
+                valor = 110;
+            } else if (C37 <= 95 && C36 == 3) {
+                valor = 110;
+            } else if (C37 <= 95 && C36 == 4) {
+                valor = 140;
+            } else if (C37 <= 95 && C36 == 5) {
+                valor = 140;
+            } else if (C37 <= 120 && C36 == 1) {
+                valor = 140;
+            } else if (C37 <= 120 && C36 == 2) {
+                valor = 140;
+            } else if (C37 <= 120 && C36 == 3) {
+                valor = 160;
+            } else if (C37 <= 120 && C36 == 4) {
+                valor = 160;
+            } else if (C37 <= 120 && C36 == 5) {
+                valor = 160;
+            } else {
+                valor = 0;
+            }
+            var resultado = valor + " mm";
+            document.getElementById("resultado8").value = resultado;
         }
     </script>
 </head>
@@ -435,11 +693,64 @@
                     </div>
                 </div>
             </form>
+            <form class="col-12 col-sm-4 mt-3 mb-2" id="form7">
+                <div class="card">
+                    <div class="card-body container-fluid">
+                        <h1>Calculadora Ducto Interior/Exterior de Fuerza</h1>
+                        <label class="form-label" for="cantCables">Cantidad de Cables</label>
+                        <input class="form-control" type="number" id="cantCables" name="cantCables" min="0">
+                        <label class="form-label" for="seccConductor">Sección Conductor</label>
+                        <input class="form-control" type="number" id="seccConductor" name="seccConductor" min="0">
+                        <label class="form-label" for="resultado7">Milimetros del Ducto</label>
+                        <input class="form-control" type="text" id="resultado7" name="resultado7" disabled>
+                        <div class="row">
+                            <div class="col-4">
+                                <button class="btn btn-primary mt-2" type="button" onclick="ductof()">Calcular
+                                    Ducto I/E</button>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-secondary mt-2" type="button"
+                                    onclick="borrarDatos('form7')">Borrar
+                                    Datos</button>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                <div><img class="w-100" src="assets/img/logo.png" alt="logo mi solar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form class="col-12 col-sm-4 mt-3 mb-2" id="form8">
+                <div class="card">
+                    <div class="card-body container-fluid">
+                        <h1>Calculadora Ducto Subterraneos</h1>
+                        <label class="form-label" for="canCables">Cantidad de Cables</label>
+                        <input class="form-control" type="number" id="canCables" name="canCables" min="0">
+                        <label class="form-label" for="seccConducto">Sección Conductor</label>
+                        <input class="form-control" type="number" id="seccConducto" name="seccConducto" min="0">
+                        <label class="form-label" for="resultado7">Milimetros del Ducto</label>
+                        <input class="form-control" type="text" id="resultado8" name="resultado7" disabled>
+                        <div class="row">
+                            <div class="col-4">
+                                <button class="btn btn-primary mt-2" type="button" onclick="ductoSub()">Calcular
+                                    Ducto Sub</button>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-secondary mt-2" type="button"
+                                    onclick="borrarDatos('form8')">Borrar
+                                    Datos</button>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                <div><img class="w-100" src="assets/img/logo.png" alt="logo mi solar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
