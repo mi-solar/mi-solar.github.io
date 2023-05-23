@@ -137,7 +137,7 @@
                 valor = 16;
             } else if (corriente <= 86) {
                 valor = 21.1;
-            }else if (corriente <= 95) {
+            } else if (corriente <= 95) {
                 valor = 25;
             } else if (corriente <= 99) {
                 valor = 26.7;
@@ -185,7 +185,87 @@
             var resultado = valor + " mm²";
             document.getElementById("resultado5").value = resultado;
         }
-
+        function ducto() {
+            var C24 = Number(document.getElementById("cables").value);
+            var C25 = Number(document.getElementById("secConductor").value);
+            if ((C25 <= 1.5 && C24 === 1) ||
+                (C25 <= 1.5 && C24 === 2) ||
+                (C25 <= 1.5 && C24 === 3) ||
+                (C25 <= 1.5 && C24 === 4) ||
+                (C25 <= 1.5 && C24 === 5)) {
+                valor= 16;
+            } else if ((C25 <= 2.5 && C24 === 1) ||
+                (C25 <= 2.5 && C24 === 2) ||
+                (C25 <= 2.5 && C24 === 3) ||
+                (C25 <= 2.5 && C24 === 4) ||
+                (C25 <= 2.5 && C24 === 5)) {
+                valor= 20;
+            } else if ((C25 <= 4 && C24 === 1) ||
+                (C25 <= 4 && C24 === 2) ||
+                (C25 <= 4 && C24 === 3) ||
+                (C25 <= 4 && C24 === 4) ||
+                (C25 <= 4 && C24 === 5)) {
+                valor= 25;
+            } else if ((C25 <= 6 && C24 === 1) ||
+                (C25 <= 6 && C24 === 2) ||
+                (C25 <= 6 && C24 === 3) ||
+                (C25 <= 6 && C24 === 4) ||
+                (C25 <= 6 && C24 === 5)) {
+                valor= 25;
+            } else if ((C25 <= 10 && C24 === 1) ||
+                (C25 <= 10 && C24 === 2) ||
+                (C25 <= 10 && C24 === 3) ||
+                (C25 <= 10 && C24 === 4) ||
+                (C25 <= 10 && C24 === 5)) {
+                valor= 32;
+            } else if ((C25 <= 16 && C24 === 1) ||
+                (C25 <= 16 && C24 === 2) ||
+                (C25 <= 16 && C24 === 3) ||
+                (C25 <= 16 && C24 === 4) ||
+                (C25 <= 16 && C24 === 5)) {
+                valor= 40;
+            } else if ((C25 <= 25 && C24 === 1) ||
+                (C25 <= 25 && C24 === 2) ||
+                (C25 <= 25 && C24 === 3) ||
+                (C25 <= 25 && C24 === 4) ||
+                (C25 <= 25 && C24 === 5)) {
+                valor= 50;
+            } else if ((C25 <= 35 && C24 === 1) ||
+                (C25 <= 35 && C24 === 2) ||
+                (C25 <= 35 && C24 === 3) ||
+                (C25 <= 35 && C24 === 4) ||
+                (C25 <= 35 && C24 === 5)) {
+                valor= 50;
+            } else if ((C25 <= 50 && C24 === 1) ||
+                (C25 <= 50 && C24 === 2) ||
+                (C25 <= 50 && C24 === 3) ||
+                (C25 <= 50 && C24 === 4) ||
+                (C25 <= 50 && C24 === 5)) {
+                valor= 63;
+            } else if ((C25 <= 70 && C24 === 1) ||
+                (C25 <= 70 && C24 === 2) ||
+                (C25 <= 70 && C24 === 3) ||
+                (C25 <= 70 && C24 === 4) ||
+                (C25 <= 70 && C24 === 5)) {
+                valor= 75;
+            } else if ((C25 <= 95 && C24 === 1) ||
+                (C25 <= 95 && C24 === 2) ||
+                (C25 <= 95 && C24 === 3) ||
+                (C25 <= 95 && C24 === 4) ||
+                (C25 <= 95 && C24 === 5)) {
+                valor= 100;
+            } else if ((C25 <= 120 && C24 === 1) ||
+                (C25 <= 120 && C24 === 2) ||
+                (C25 <= 120 && C24 === 3) ||
+                (C25 <= 120 && C24 === 4) ||
+                (C25 <= 120 && C24 === 5)) {
+                valor= 100;
+            } else {
+                valor= 0;
+            }
+            var resultado = valor + " mm";
+            document.getElementById("resultado6").value = resultado;
+        }
     </script>
 </head>
 
@@ -319,6 +399,33 @@
                             <div class="col-4">
                                 <button class="btn btn-secondary mt-2" type="button"
                                     onclick="borrarDatos('form5')">Borrar
+                                    Datos</button>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                <div><img class="w-100" src="assets/img/logo.png" alt="logo mi solar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form class="col-12 col-sm-4 mt-3 mb-2" id="form6">
+                <div class="card">
+                    <div class="card-body container-fluid">
+                        <h1>Calculadora Ducto Domiciliario</h1>
+                        <label class="form-label" for="cables">Cantidad de Cables</label>
+                        <input class="form-control" type="number" id="cables" name="cables" min="0">
+                        <label class="form-label" for="secConductor">Sección Conductor</label>
+                        <input class="form-control" type="number" id="secConductor" name="secConductor" min="0">
+                        <label class="form-label" for="resultado6">Milimetros del Ducto</label>
+                        <input class="form-control" type="text" id="resultado6" name="resultado6" disabled>
+                        <div class="row">
+                            <div class="col-4">
+                                <button class="btn btn-primary mt-2" type="button" onclick="ducto()">Calcular
+                                    Ducto.Dom.</button>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-secondary mt-2" type="button"
+                                    onclick="borrarDatos('form6')">Borrar
                                     Datos</button>
                             </div>
                             <div class="col-4 d-flex justify-content-center align-items-center">
