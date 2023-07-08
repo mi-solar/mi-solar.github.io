@@ -1,7 +1,7 @@
-$(".btn-secondary").click(function() {
-    var formId = $(this).closest('form').attr('id');
-    $("#" + formId)[0].reset();
-  });
+$(".btn-secondary").click(function () {
+  var formId = $(this).closest('form').attr('id');
+  $("#" + formId)[0].reset();
+});
 
 $("#calcular-sombra").click(function () {
   var largo = Number($("#largo").val());
@@ -16,21 +16,21 @@ $("#calcular-sombra").click(function () {
 });
 
 $("#calcular-potencia").click(function () {
-    var voltaje = Number($("#voltaje").val());
-    var corriente = Number($("#corriente").val());
-    var resultado = (voltaje * corriente).toFixed(2) + " W";
-    $("#resultado2").val(resultado);
+  var voltaje = Number($("#voltaje").val());
+  var corriente = Number($("#corriente").val());
+  var resultado = (voltaje * corriente).toFixed(2) + " W";
+  $("#resultado2").val(resultado);
 });
 
-$("#calcular-corriente").click(function(){
-    var potencia = Number($("#potencia").val());
-    var voltaje = Number($("#voltaje2").val());
-    var resultado3 = potencia / voltaje;
-    var resultado = Math.round(resultado3) + " A";
-    $("#resultado3").val(resultado);
-  });
+$("#calcular-corriente").click(function () {
+  var potencia = Number($("#potencia").val());
+  var voltaje = Number($("#voltaje2").val());
+  var resultado3 = potencia / voltaje;
+  var resultado = Math.round(resultado3) + " A";
+  $("#resultado3").val(resultado);
+});
 
-$("#calcular-conductor").click(function() {
+$("#calcular-conductor").click(function () {
   var corriente = Number($("#corriente2").val());
   if (corriente <= 14) {
     resultado = 1.5;
@@ -107,7 +107,7 @@ $("#calcular-conductor").click(function() {
   $("#resultado4").val(resultado);
 });
 
-$("#calcular-conductor-dos").click(function() {
+$("#calcular-conductor-dos").click(function () {
   var corriente = Number($("#corriente3").val());
   if (corriente <= 17) {
     valor = 1.5;
@@ -182,7 +182,7 @@ $("#calcular-conductor-dos").click(function() {
   $("#resultado5").val(resultado);
 });
 
-$("#calcular-ducto").click(function() {
+$("#calcular-ducto").click(function () {
   var C24 = Number($("#cables").val());
   var C25 = Number($("#secConductor").val());
   if (
@@ -288,7 +288,7 @@ $("#calcular-ducto").click(function() {
   $("#resultado6").val(resultado);
 });
 
-$("#calcular-ductof").click(function() {
+$("#calcular-ductof").click(function () {
   var C30 = Number($("#cantCables").val());
   var C31 = Number($("#seccConductor").val());
   if (C31 <= 1.5 && C30 === 1) {
@@ -418,7 +418,7 @@ $("#calcular-ductof").click(function() {
   $("#resultado7").val(resultado);
 });
 
-$("#calcular-ducto-sub").click(function() {
+$("#calcular-ducto-sub").click(function () {
   var C36 = Number($("#canCables").val());
   var C37 = Number($("#seccConducto").val());
   if (C37 <= 1.5 && C36 == 1) {
