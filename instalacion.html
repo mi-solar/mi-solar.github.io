@@ -1,0 +1,179 @@
+<form class=" mt-3 mb-2" id="form1">
+    <div class="card  bg-tema text-tema">
+        <div class="card-body container-fluid">
+            <h2>Calculadora de Sombras</h2>
+            <label class="form-label" for="largo">Largo objeto</label>
+            <input class="form-control" type="number" id="largo" name="largo" min="0">
+            <label class="form-label" for="grado">Angulo del Sol</label>
+            <input class="form-control" type="number" id="grado" name="grado" min="0">
+            <label class="form-label" for="angulo">Ángulo de Objeto</label>
+            <input class="form-control" type="number" id="angulo" name="angulo" min="0">
+            <label class="form-label" for="resultado">Resultado</label>
+            <input class="form-control" type="text" id="resultado" name="resultado" disabled>
+            <div class="row">
+                <div class="col-4">
+                    <button id="calcular-sombra" class="btn btn-tema rounded-pill mt-2" type="button">Calcular</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-tema btn-borrar rounded-pill mt-2" type="button">Borrar
+                        Datos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<form class=" mt-3 mb-2" id="form2">
+    <div class="card  bg-tema text-tema">
+        <div class="card-body container-fluid">
+            <h2>Calculadora de Potencia</h2>
+            <label class="form-label" for="largo">Voltaje</label>
+            <input class="form-control" type="number" id="voltaje" name="voltaje" min="0">
+            <label class="form-label" for="grado">Corriente</label>
+            <input class="form-control" type="number" id="corriente" name="corriente" min="0">
+            <label class="form-label" for="resultado">Potencia</label>
+            <input class="form-control" type="text" id="resultado2" name="resultado2" disabled>
+            <div class="row">
+                <div class="col-4">
+                    <button id="calcular-potencia" class="btn btn-tema rounded-pill mt-2" type="button">Calcular</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-tema btn-borrar rounded-pill mt-2" type="button">Borrar
+                        Datos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<form class=" mt-3 mb-2" id="form3">
+    <div class="card  bg-tema text-tema">
+        <div class="card-body container-fluid">
+            <h2>Calculadora de Corriente</h2>
+            <label class="form-label" for="largo">Potencia</label>
+            <input class="form-control" type="number" id="potencia" name="potencia" min="0">
+            <label class="form-label" for="grado">Voltaje</label>
+            <input class="form-control" type="number" id="voltaje2" name="voltaje2" min="0">
+            <label class="form-label" for="resultado">Corriente</label>
+            <input class="form-control" type="text" id="resultado3" name="resultado3" disabled>
+            <div class="row">
+                <div class="col-4">
+                    <button id="calcular-corriente" class="btn btn-tema rounded-pill mt-2" type="button">Calcular</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-tema btn-borrar rounded-pill mt-2" type="button">Borrar
+                        Datos</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</form>
+<form class=" mt-3 mb-2" id="form4">
+    <div class="card  bg-tema text-tema">
+        <div class="card-body container-fluid">
+            <h2>Calculadora Sección Conductor H07V, H07Z1, THWN, NYFY, Acometida.</h2>
+            <label class="form-label" for="largo">Corriente</label>
+            <input class="form-control" type="number" id="corriente2" name="corriente2" min="0">
+            <label class="form-label" for="resultado">Sección Conductor</label>
+            <input class="form-control" type="text" id="resultado4" name="resultado4" disabled>
+            <div class="row">
+                <div class="col-4">
+                    <button id="calcular-conductor" class="btn btn-tema rounded-pill mt-2" type="button">Calcular</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-tema btn-borrar rounded-pill mt-2" type="button">Borrar
+                        Datos</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</form>
+<form class=" mt-3 mb-2" id="form5">
+    <div class="card  bg-tema text-tema">
+        <div class="card-body container-fluid">
+            <h2>Calculadora Sección Conductor THHN, RV, RV-K, RZ1, RZ1-K.</h2>
+            <label class="form-label" for="largo">Corriente</label>
+            <input class="form-control" type="number" id="corriente3" name="corriente3" min="0">
+            <label class="form-label" for="resultado">Sección Conductor</label>
+            <input class="form-control" type="text" id="resultado5" name="resultado5" disabled>
+            <div class="row">
+                <div class="col-4">
+                    <button id="calcular-conductor-dos" class="btn btn-tema rounded-pill mt-2" type="button">Calcular</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-tema btn-borrar rounded-pill mt-2" type="button">Borrar
+                        Datos</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</form>
+<form class=" mt-3 mb-2" id="form6">
+    <div class="card  bg-tema text-tema">
+        <div class="card-body container-fluid">
+            <h2>Calculadora Ducto Domiciliario</h2>
+            <label class="form-label" for="cables">Cantidad de Cables</label>
+            <input class="form-control" type="number" id="cables" name="cables" min="0">
+            <label class="form-label" for="secConductor">Sección Conductor</label>
+            <input class="form-control" type="number" id="secConductor" name="secConductor" min="0">
+            <label class="form-label" for="resultado6">Milimetros del Ducto</label>
+            <input class="form-control" type="text" id="resultado6" name="resultado6" disabled>
+            <div class="row">
+                <div class="col-4">
+                    <button id="calcular-ducto" class="btn btn-tema rounded-pill mt-2" type="button">Calcular</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-tema btn-borrar rounded-pill mt-2" type="button">Borrar
+                        Datos</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</form>
+<form class=" mt-3 mb-2" id="form7">
+    <div class="card  bg-tema text-tema">
+        <div class="card-body container-fluid">
+            <h2>Calculadora Ducto Interior/Exterior de Fuerza</h2>
+            <label class="form-label" for="cantCables">Cantidad de Cables</label>
+            <input class="form-control" type="number" id="cantCables" name="cantCables" min="0">
+            <label class="form-label" for="seccConductor">Sección Conductor</label>
+            <input class="form-control" type="number" id="seccConductor" name="seccConductor" min="0">
+            <label class="form-label" for="resultado7">Milimetros del Ducto</label>
+            <input class="form-control" type="text" id="resultado7" name="resultado7" disabled>
+            <div class="row">
+                <div class="col-4">
+                    <button id="calcular-ductof" class="btn btn-tema rounded-pill mt-2" type="button">Calcular</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-tema btn-borrar rounded-pill mt-2" type="button">Borrar
+                        Datos</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+<form class=" mt-3 mb-2" id="form8">
+    <div class="card  bg-tema text-tema">
+        <div class="card-body container-fluid">
+            <h2>Calculadora Ducto Subterraneos</h2>
+            <label class="form-label" for="canCables">Cantidad de Cables</label>
+            <input class="form-control" type="number" id="canCables" name="canCables" min="0">
+            <label class="form-label" for="seccConducto">Sección Conductor</label>
+            <input class="form-control" type="number" id="seccConducto" name="seccConducto" min="0">
+            <label class="form-label" for="resultado7">Milimetros del Ducto</label>
+            <input class="form-control" type="text" id="resultado8" name="resultado7" disabled>
+            <div class="row">
+                <div class="col-4">
+                    <button id="calcular-ducto-sub" class="btn btn-tema rounded-pill mt-2" type="button">Calcular</button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-tema btn-borrar rounded-pill mt-2" type="button">Borrar
+                        Datos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,42 @@
+<div class="card-body" id="info">
+    <h1 class="text-tema">Cotizar</h1>
+    <form action="https://formsubmit.co/jorgea.misolar@gmail.com" method="post">
+        <div class="row">
+            <div class="col-12 col-sm-6 mb-3">
+                <label for="exampleFormControlInput1" class="form-label text-tema">Tú nombre</label>
+                <input type="text" name="nombre" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Juanito Perez">
+            </div>
+            <div class="col-12 col-sm-6 mb-3">
+                <label for="exampleInputFone" class="form-label text-tema">Tú número de teléfono</label>
+                <input type="tel" name="teléfono" class="form-control" id="exampleInputFone" value="+56"
+                    maxlength="12" placeholder="ejemplo: 912345678">
+            </div>
+            <div class="col-12 col-sm-6 mb-3">
+                <label for="calendario" class="form-label text-tema">¿Cuando te podemos contactar?
+                </label>
+                <input type="datetime-local" name="fecha" class="form-control" id="calendario">
+            </div>
+            <div class="col-12 col-sm-6 mb-3">
+                <label for="servicio" class="form-label text-tema">Servicio qué quieres contratar
+                </label>
+                <select class="form-select" name="tipo-servicio" id="servicio"
+                    aria-label="Default select example">
+                    <option selected>Elige:</option>
+                    <option value="Mantenimiento Solar">Mantenimiento Solar</option>
+                    <option value="Instalación Solar">Instalación Solar</option>
+                    <option value="Instalación Enchufes">Instalación Enchufes</option>
+                    <option value="Instalación Interruptor">Instalación Interruptor</option>
+                    <option value="Caja de Distribución">Caja de Distribución</option>
+                    <option value="Instalación Luces">Instalación Luces</option>
+                </select>
+            </div>
+            <div class="col-12 mb-3">
+                <label for="otro" class="form-label text-tema">Otro servicio qué necesites
+                </label>
+                <textarea name="otro-servicio" class="form-control" id="otro" rows="3"></textarea>
+            </div>
+        </div>
+        <button type="submit" value="Enviar" class="btn btn-tema rounded-pill">Enviar</button>
+    </form>
+</div>

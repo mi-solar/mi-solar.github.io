@@ -1,186 +1,172 @@
 /*variables*/
-$tipografia-proyecto: 'Roboto', sans-serif;
-$fondo-proyecto: #ADC5D9;
-$fondo-secundario-proyecto: #FFFFFF;
-$color-principal-proyecto: #7595BF;
-$color-secundario-proyecto: #3C5473;
-$letras-proyecto: #020200;
-$letras-secundario-proyecto: #BFDC58;
+$color-text-btn: #fff;
 /*variables*/
-
 /*mixins*/
-@mixin heading-1 {
-    font-family: $tipografia-proyecto;
-    font-size: 48px;
-    line-height: 58px;
-    font-weight: bold;
-    letter-spacing: 0px;
-}
-@mixin heading-2 {
-    font-family: $tipografia-proyecto;
-    font-size: 40px;
-    line-height: 49px;
-    font-weight: bold;
-    letter-spacing: 0px;
-}
-@mixin heading-3 {
-    font-family: $tipografia-proyecto;
-    font-size: 32px;
-    line-height: 39px;
-    font-weight: bold;
-    letter-spacing: 0px;
-}
-@mixin heading-4 {
-    font-family: $tipografia-proyecto;
-    font-size: 28px;
-    line-height: 34px;
-    font-weight: bold;
-    letter-spacing: 0px;
-}
-@mixin heading-5 {
-    font-family: $tipografia-proyecto;
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: bold;
-    letter-spacing: 0px;
-}
-@mixin heading-6 {
-    font-family: $tipografia-proyecto;
-    font-size: 14px;
-    line-height: 17px;
-    font-weight: bold;
-    letter-spacing: 0px;
-}
-@mixin parrafo {
-    font-family: $tipografia-proyecto;
-    font-size: 14px;
-    line-height: 17px;
-    font-weight: 400;
-    letter-spacing: 0px;
-}
-@mixin enlace {
-    font-family: $tipografia-proyecto;
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: 400;
-    letter-spacing: 0px;
-}
 /*mixins*/
-
-/*tipografia */
-h1 {
-    @include heading-1;
-}
-.h1 {
-    @include heading-1;
-}
-h2 {
-    @include heading-2;
-}
-.h2 {
-    @include heading-2;
-}
-h3 {
-    @include heading-3;
-}
-.h3 {
-    @include heading-3;
-}
-h4 {
-    @include heading-4;
-}
-.h4 {
-    @include heading-4;
-}
-h5 {
-    @include heading-5;
-}
-.h5 {
-    @include heading-5;
-}
-h6 {
-    @include heading-6;
-}
-.h6 {
-    @include heading-6;
-}
-p {
-    @include parrafo;
-}
-a {
-    @include enlace;
+/*tema claro */
+.tema-claro
+{
+  background-image: url(../img/tema-claro.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-/*tipografia */
-body{
-    background-color: $fondo-proyecto;
+.tema-claro .text-tema
+{
+    color: rgb(6, 19, 61);
 }
-header{
-    background-color: $color-secundario-proyecto;
-    .nav-link{
-        color: #ADC5D9;
-    }
-    .nav-link:hover{
-        background-color: $color-principal-proyecto;
-        color: $fondo-secundario-proyecto;
-    }
-    .active{
-        background-color: $color-principal-proyecto !important;
-    }
+.tema-claro .text-secundario{
+    color: rgb(6, 19, 61);
 }
-main{
-    color: $letras-proyecto;
+.tema-claro .btn-tema-nav
+{
+  background: rgba(104, 255, 95, 0.34);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(104, 255, 95, 0.3);
 }
-footer{
-    background-color: $color-principal-proyecto;
-    a{
-        color: $letras-proyecto;
-    }
-    a:hover{
-        color: $letras-secundario-proyecto;
-    }
+
+.tema-claro .bg-tema
+{
+  background: rgba(104, 255, 95, 0.34);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(104, 255, 95, 0.3);
 }
-.card{
-    border: $letras-proyecto 1px solid;
-    .card-header{
-        background-color: $letras-secundario-proyecto;
-        color: $letras-proyecto;
-    }
+.tema-claro .btn-tema{
+    /* From https://css.glass */
+background: rgba(0, 73, 19, 0.61);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(0, 73, 19, 0.3);
+color: $color-text-btn;
 }
-.navbar-toggler{
-    background-color: #BFDC58;
+/*tema oscuro */
+.tema-oscuro
+{
+  background-image: url(../img/tema-oscuro.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
-.icono{
-    background-color: $fondo-proyecto;
-    color: $letras-proyecto;
-    height: 50px;
-    width: 50px;
+
+.tema-oscuro .text-tema
+{
+  color: rgb(6, 19, 61);
 }
-.icono:hover{
-    background-color: $color-secundario-proyecto;
-    color: $letras-secundario-proyecto;
+
+.tema-oscuro .btn-tema-nav
+{
+  color: #fff !important;
+  background: rgba(6, 19, 61, 0.59);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(6, 19, 61, 0.3);
 }
-.btn-primary{
-    background-color: $color-principal-proyecto;
-    border: none;
+.tema-oscuro .btn-tema{
+    /* From https://css.glass */
+background: rgba(0, 3, 73, 0.61);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(0, 3, 73, 0.3);
+color: $color-text-btn;
 }
-.btn-primary:hover{
-    background-color: $color-secundario-proyecto;
+.tema-oscuro .bg-tema
+{
+  color: #fff !important;
+  background: rgba(6, 19, 61, 0.59);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(6, 19, 61, 0.3);
 }
-.btn-secondary{
-    border: none;
-    background-color: $color-secundario-proyecto;
+.tema-oscuro .text-secundario{
+    color: #fff;
 }
-.btn-secondary:hover{
-    background-color: $letras-secundario-proyecto;
-    color: $color-secundario-proyecto;
+.vidrio
+{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
-.circulo{
-    background-color: $color-secundario-proyecto;
-    height: 200px;
-    width: 200px;
+
+.vidrio-nav
+{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0px 0px 16px 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-border-radius: 0px 0px 16px 16px;
+  -moz-border-radius: 0px 0px 16px 16px;
+  -ms-border-radius: 0px 0px 16px 16px;
+  -o-border-radius: 0px 0px 16px 16px;
 }
-.fa-user{
-    font-size: 150px;
-    color: $fondo-secundario-proyecto;
+
+.vidrio-footer
+{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px 16px 0px 0px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-border-radius: 16px 16px 0px 0px;
+  -moz-border-radius: 16px 16px 0px 0px;
+  -ms-border-radius: 16px 16px 0px 0px;
+  -o-border-radius: 16px 16px 0px 0px;
+}
+
+#contenido
+{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#servicios .card
+{
+  height: 100%;
+}
+
+.logo
+{
+  width: 100px;
+  height: auto;
+}
+.calc{
+  display: none !important;
+}
+.correcto{
+  background-color: green;
+}
+.incorrecto{
+  background-color: red;
+}
+#logo-carga{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 100;
+  position: absolute;
+}
+.no-scroll{
+  overflow: hidden;
 }
