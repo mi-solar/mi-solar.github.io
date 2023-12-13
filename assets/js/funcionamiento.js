@@ -1,25 +1,47 @@
 $(document).ready(function () {
-  setTimeout(function() {
-    $("#logo-carga").fadeOut(500, function() {
+  setTimeout(function () {
+    $("#logo-carga").fadeOut(500, function () {
       $(this).remove();
       $("body").removeClass("no-scroll");
     });
   }, 1000);
-  $(".btn-nav").click(function (event) {
-    event.preventDefault();
-    $(".btn-nav").removeClass("active btn-tema-nav");
-    var enlace = $(this).attr("href");
-    $("#contenido").load(enlace + " #info");
-    $(this).addClass("active btn-tema-nav");
+  var btn = $(".btn-nav");
+  if (localStorage.getItem("isLoggedIn") == "true" && btn.length == 4) {
+    $(".navbar-nav").append('<li class="nav-item"><a id="cerrar" class="btn-nav btn rounded-pill text-tema" href="cerrar.html">Cerrar Sesion</a></li>');
+  }
+  btn.click(function (event) {
+    if ($(this) != $(".btn-nav").eq(4)) {
+      console.log($(".btn-nav").eq(4));
+      event.preventDefault();
+      $(".btn-nav").removeClass("active btn-tema-nav");
+      var enlace = $(this).attr("href");
+      if (enlace == "sesion.html" && localStorage.getItem("isLoggedIn") == "true") {
+        $("#contenido").load("calc.html #info");
+        console.log("Sesión iniciada");
+      } else {
+        $("#contenido").load(enlace + " #info");
+      }
+      $(this).addClass("active btn-tema-nav");
+    }
   });
-  $(".btn-nav").click(function(){
-    $("title").text($(this).text()+" | Mi Solar")
+  $(".navbar-nav").on("click", "#cerrar", function (e) {
+    e.preventDefault();
+    console.log("Sesión cerrada");
+    localStorage.setItem('isLoggedIn', false);
+    $(".btn-nav").eq(4).remove();
+    $(".btn-nav").removeClass("active btn-tema-nav");
+    $("#contenido").load("index.html #info");
+    console.log("Sesión cerrada");
+    $(".btn-nav").eq(0).addClass("active btn-tema-nav");
+  });
+  $(".btn-nav").click(function () {
+    $("title").text($(this).text() + " | Mi Solar")
   });
   $("#tema").click(function () {
     $(this).find("i").toggleClass("fa-sun fa-moon");
     $("body").toggleClass("tema-claro tema-oscuro");
   });
-  $("#contenido").on("click", "#basic", function() {
+  $("#contenido").on("click", "#basic", function () {
     $(this).find("i").toggleClass("fa-eye-slash fa-eye");
     if ($("#contrasena").attr("type") == "password") {
       $("#contrasena").attr("type", "text");
@@ -27,63 +49,101 @@ $(document).ready(function () {
       $("#contrasena").attr("type", "password");
     }
   });
-  $("#contenido").on("submit", "#login-form", function(event) {
+  var diccionario = [["a", "12"],
+  ["b", "13"], ["c", "14"], ["d", "15"], ["e", "16"], ["f", "17"], ["g", "18"], ["h", "19"], ["i", "20"], ["j", "21"], ["k", "22"], ["l", "23"], ["m", "24"], ["n", "25"], ["ñ", "26"], ["o", "27"], ["p", "28"], ["q", "29"], ["r", "30"], ["s", "31"], ["t", "32"], ["u", "33"], ["v", "34"], ["w", "35"], ["x", "36"], ["y", "37"], ["z", "38"], ["0", "39"], ["1", "40"], ["2", "41"], ["3", "42"], ["4", "43"], ["5", "44"], ["6", "45"], ["7", "46"], ["8", "47"], ["9", "48"], [".", "49"], ["@", "50"], ["_", "51"], ["-", "52"], [" ", "53"], ["A", "54"], ["B", "55"], ["C", "56"], ["D", "57"], ["E", "58"], ["F", "59"], ["G", "60"], ["H", "61"], ["I", "62"], ["J", "63"], ["K", "64"], ["L", "65"], ["M", "66"], ["N", "67"], ["Ñ", "68"], ["O", "69"], ["P", "70"], ["Q", "71"], ["R", "72"], ["S", "73"], ["T", "74"], ["U", "75"], ["V", "76"], ["W", "77"], ["X", "78"], ["Y", "79"], ["Z", "80"], ["!", "81"], ["#", "82"], ["$", "83"], ["%", "84"], ["&", "85"], ["(", "86"], [")", "87"], ["=", "88"], ["?", "89"], ["¿", "90"], ["¡", "91"], ["*", "92"], ["+", "93"], [";", "94"], [":", "95"], [",", "96"], ["<", "97"], [">", "98"], ["[", "99"], ["1", "as"], ["2", "sd"], ["3", "df"], ["4", "fg"], ["5", "gh"], ["6", "hj"], ["7", "jk"], ["8", "kl"], ["9", "lz"], ["0", "zx"]];
+  var email = "212730181612492420312723123050182412202349142724";
+  var password = "64272216sdzxzxas";
+  var correo = "";
+  var contra = "";
+  var usuario = {
+    email: email,
+    contrasena: password
+  };
+  localStorage.setItem("usuario", JSON.stringify(usuario));
+  function desencriptarUsuario() {
+    function usuario() {
+      for (var i = 0; i < email.length; i += 2) {
+        for (var j = 0; j < diccionario.length; j++) {
+          if (email.substring(i, i + 2) == diccionario[j][1]) {
+            correo += diccionario[j][0];
+          }
+        }
+      }
+    }
+    function contrasena() {
+      for (var i = 0; i < password.length; i += 2) {
+        for (var j = 0; j < diccionario.length; j++) {
+          if (password.substring(i, i + 2) == diccionario[j][1]) {
+            contra += diccionario[j][0];
+          }
+        }
+      }
+    }
+    usuario();
+    contrasena();
+  }
+  $("#contenido").on("submit", "#login-form", function (event) {
     event.preventDefault(); // previene el comportamiento predeterminado del formulario
     // obtiene los valores del formulario
     var username = $('#email').val();
     var password = $('#contrasena').val();
     // verifica si los datos son correctos
-    if (username == 'jorgea.misolar@gmail.com' && password == 'Koke2001') {
-      // establece la sesión como iniciada
+    desencriptarUsuario();
+    if (username == correo && password == contra) {
       console.log("Sesión iniciada");
-      sessionStorage.setItem('isLoggedIn', true);
+      localStorage.setItem('isLoggedIn', true);
+      if (localStorage.getItem("isLoggedIn") == "true" && btn.length == 4) {
+        $(".navbar-nav").append('<li class="nav-item"><a id="cerrar" class="btn-nav btn rounded-pill text-tema" href="cerrar.html">Cerrar Sesion</a></li>');
+      }
       // carga la página si los datos son correctos
       $("title").text("Calculadoras | Mi Solar");
-    $("#contenido").load("calc.html");
+      $("#contenido").load("calc.html");
+      correo = "";
+      contra = "";
     } else {
       // muestra una alerta si los datos son incorrectos
       alert('Los datos ingresados son incorrectos. Por favor, inténtalo de nuevo.');
     }
   });
-  $("#contenido").on("click", "#solares", function() {
+  $("#contenido").on("click", "#solares", function () {
     $("#instalacion").removeClass("btn-tema");
     $(this).addClass("btn-tema");
     $("#tipo-instalacion").addClass("calc");
     $("#tipo-solares").removeClass("calc");
   });
-  $("#contenido").on("click", "#instalacion", function() {
+  $("#contenido").on("click", "#instalacion", function () {
     $("#solares").removeClass("btn-tema");
     $(this).addClass("btn-tema");
     $("#tipo-solares").addClass("calc");
     $("#tipo-instalacion").removeClass("calc");
   });
   //cargar calculadora correspondiente al tipo seleccionado
-  $("#contenido").on("click", "#tipo-solares button", function(event) {
+  $("#contenido").on("click", "#tipo-solares button", function (event) {
     event.preventDefault();
     $("#tipo-solares button").removeClass("btn-tema");
     $(this).addClass("btn-tema");
     var calc = $(this).attr("data-calc");
-    var enlace = "solar.html #form"+calc;
+    var enlace = "solar.html #form" + calc;
     $("#ejercicio").load(enlace);
   });
 
-  $("#contenido").on("click", "#tipo-instalacion button", function(event) {
+  $("#contenido").on("click", "#tipo-instalacion button", function (event) {
     event.preventDefault();
     $("#tipo-instalacion button").removeClass("btn-tema");
     $(this).addClass("btn-tema");
     var calc = $(this).attr("data-calc");
-    var enlace = "instalacion.html #form"+calc;
+    var enlace = "instalacion.html #form" + calc;
     $("#ejercicio").load(enlace);
   });
 
   //calculos
-  $("#contenido").on("click", ".btn-borrar", function(){
+  $("#contenido").on("click", ".btn-borrar", function () {
     var formId = $(this).closest('form').attr('id');
     $("#" + formId)[0].reset();
     $("#estado").removeClass("correcto incorrecto");
   });
-  
-  $("#contenido").on("click", "#calcular-sombra", function() {
+
+  $("#contenido").on("click", "#calcular-sombra", function () {
     var largo = Number($("#largo").val());
     var grado = Number($("#grado").val());
     var angulo = Number($("#angulo").val());
@@ -94,22 +154,22 @@ $(document).ready(function () {
     resultado = Math.round(resultado) + " cm";
     $("#resultado").val(resultado);
   });
-  $("#contenido").on("click", "#calcular-potencia", function() {
+  $("#contenido").on("click", "#calcular-potencia", function () {
     var voltaje = Number($("#voltaje").val());
     var corriente = Number($("#corriente").val());
     var resultado = (voltaje * corriente).toFixed(2) + " W";
     $("#resultado2").val(resultado);
   });
-  
-  $("#contenido").on("click", "#calcular-corriente", function() {
+
+  $("#contenido").on("click", "#calcular-corriente", function () {
     var potencia = Number($("#potencia").val());
     var voltaje = Number($("#voltaje2").val());
     var resultado3 = potencia / voltaje;
     var resultado = Math.round(resultado3) + " A";
     $("#resultado3").val(resultado);
   });
-  
-  $("#contenido").on("click", "#calcular-conductor", function() {
+
+  $("#contenido").on("click", "#calcular-conductor", function () {
     var corriente = Number($("#corriente2").val());
     if (corriente <= 14) {
       resultado = 1.5;
@@ -185,8 +245,8 @@ $(document).ready(function () {
     var resultado = resultado + " mm²";
     $("#resultado4").val(resultado);
   });
-  
-  $("#contenido").on("click", "#calcular-conductor-dos", function() {
+
+  $("#contenido").on("click", "#calcular-conductor-dos", function () {
     var corriente = Number($("#corriente3").val());
     if (corriente <= 17) {
       valor = 1.5;
@@ -260,8 +320,8 @@ $(document).ready(function () {
     var resultado = valor + " mm²";
     $("#resultado5").val(resultado);
   });
-  
-  $("#contenido").on("click", "#calcular-ducto", function() {
+
+  $("#contenido").on("click", "#calcular-ducto", function () {
     var C24 = Number($("#cables").val());
     var C25 = Number($("#secConductor").val());
     if (
@@ -366,8 +426,8 @@ $(document).ready(function () {
     var resultado = valor + " mm";
     $("#resultado6").val(resultado);
   });
-  
-  $("#contenido").on("click", "#calcular-ductof", function() {
+
+  $("#contenido").on("click", "#calcular-ductof", function () {
     var C30 = Number($("#cantCables").val());
     var C31 = Number($("#seccConductor").val());
     if (C31 <= 1.5 && C30 === 1) {
@@ -496,8 +556,8 @@ $(document).ready(function () {
     var resultado = result + " mm";
     $("#resultado7").val(resultado);
   });
-  
-  $("#contenido").on("click", "#calcular-ducto-sub", function() {
+
+  $("#contenido").on("click", "#calcular-ducto-sub", function () {
     var C36 = Number($("#canCables").val());
     var C37 = Number($("#seccConducto").val());
     if (C37 <= 1.5 && C36 == 1) {
@@ -627,23 +687,23 @@ $(document).ready(function () {
     $("#resultado8").val(resultado);
   });
   //calcular paneles
-  $("#contenido").on("click", "#calcular-paneles", function() {
+  $("#contenido").on("click", "#calcular-paneles", function () {
     var energia = Number($("#energia").val());
     var hora = Number($("#hora").val());
     var potencia = Number($("#potencia").val());
     var eficencia = Number($("#eficencia").val() / 100);
-    var resultado = energia/(hora*potencia*eficencia);
+    var resultado = energia / (hora * potencia * eficencia);
     resultado = Math.ceil(resultado);
     $("#resultado").val(resultado);
   });
   //calcular baterias
-  $("#contenido").on("click", "#calcular-bateria", function() {
+  $("#contenido").on("click", "#calcular-bateria", function () {
     var energia = Number($("#energia").val());
     var dias = Number($("#dias").val());
-    var profundidad = Number($("#profundidad").val()/100);
+    var profundidad = Number($("#profundidad").val() / 100);
     var voltaje = Number($("#voltaje").val());
     var capacidad = Number($("#capacidad").val());
-    var resultado = ((energia*dias)/(profundidad*voltaje))/capacidad;
+    var resultado = ((energia * dias) / (profundidad * voltaje)) / capacidad;
     resultado = Math.ceil(resultado);
     $("#resultado2").val(resultado);
   });
@@ -653,40 +713,40 @@ $(document).ready(function () {
   var disyuntor;
   var corrienteProteccion;
   var resultado;
-  $("#contenido").on("keyup", "#energia", function() {
+  $("#contenido").on("keyup", "#energia", function () {
     energia = Number($("#energia").val());
-    corrienteProteccion = ((energia/(220*0.9))*100)/90;
-   corrienteProteccion = corrienteProteccion.toFixed(2);
-   $("#corriente-proteccion").val(corrienteProteccion);
+    corrienteProteccion = ((energia / (220 * 0.9)) * 100) / 90;
+    corrienteProteccion = corrienteProteccion.toFixed(2);
+    $("#corriente-proteccion").val(corrienteProteccion);
   });
-  $("#contenido").on("click", "#comprobar-disyuntor", function() {
-   
+  $("#contenido").on("click", "#comprobar-disyuntor", function () {
+
     disyuntor = Number($("#disyuntor").val());
-    resultado = (corrienteProteccion/disyuntor)*100;
-   if(resultado % 1 >= 0.5) { // Si el resultado tiene decimales mayores o iguales a 0.5
-    resultado = Math.ceil(resultado); // Redondear hacia arriba
-  } else { // Si el resultado tiene decimales menores a 0.5
-    resultado = Math.trunc(resultado); // Truncar el resultado
-  }
-   $("#resultado3").val(resultado + "%");
-   if (resultado <= 90){
-    $("#estado").removeClass("incorrecto");
-    $("#estado").addClass("correcto");
-  } else {
-    $("#estado").removeClass("correcto");
-    $("#estado").addClass("incorrecto");
-  }
+    resultado = (corrienteProteccion / disyuntor) * 100;
+    if (resultado % 1 >= 0.5) { // Si el resultado tiene decimales mayores o iguales a 0.5
+      resultado = Math.ceil(resultado); // Redondear hacia arriba
+    } else { // Si el resultado tiene decimales menores a 0.5
+      resultado = Math.trunc(resultado); // Truncar el resultado
+    }
+    $("#resultado3").val(resultado + "%");
+    if (resultado <= 90) {
+      $("#estado").removeClass("incorrecto");
+      $("#estado").addClass("correcto");
+    } else {
+      $("#estado").removeClass("correcto");
+      $("#estado").addClass("incorrecto");
+    }
   });
-  $("#contenido").on("click", "#comprobar-cantidad", function() {
-   var largoPanel = Number($("#largo-panel").val());
-   var anchoPanel = Number($("#ancho-panel").val());
-   var largoLugar = Number($("#largo-lugar").val());
-   var anchoLugar = Number($("#ancho-lugar").val());
-   var largoDimension = largoLugar/largoPanel;
-   largoDimension = Math.trunc(largoDimension);
-   $("#largo-dimension").val(largoDimension);
-   var anchoDimension = anchoLugar/anchoPanel;
-   anchoDimension = Math.trunc(anchoDimension);
-   $("#ancho-dimension").val(anchoDimension);
+  $("#contenido").on("click", "#comprobar-cantidad", function () {
+    var largoPanel = Number($("#largo-panel").val());
+    var anchoPanel = Number($("#ancho-panel").val());
+    var largoLugar = Number($("#largo-lugar").val());
+    var anchoLugar = Number($("#ancho-lugar").val());
+    var largoDimension = largoLugar / largoPanel;
+    largoDimension = Math.trunc(largoDimension);
+    $("#largo-dimension").val(largoDimension);
+    var anchoDimension = anchoLugar / anchoPanel;
+    anchoDimension = Math.trunc(anchoDimension);
+    $("#ancho-dimension").val(anchoDimension);
   });
 });
