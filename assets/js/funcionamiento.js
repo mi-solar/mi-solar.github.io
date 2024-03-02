@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  const date = new Date()
+  const year = date.getFullYear()
+  $('#year').append(`© Mi Solar ${year}`)
   setTimeout(function () {
     $("#logo-carga").fadeOut(500, function () {
       $(this).remove();
