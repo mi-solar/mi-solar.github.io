@@ -11,13 +11,12 @@ $(document).ready(function () {
   }
   btn.click(function (event) {
     if ($(this) != $(".btn-nav").eq(4)) {
-      console.log($(".btn-nav").eq(4));
       event.preventDefault();
       $(".btn-nav").removeClass("active btn-tema-nav");
       var enlace = $(this).attr("href");
       if (enlace == "sesion.html" && localStorage.getItem("isLoggedIn") == "true") {
         $("#contenido").load("calc.html #info");
-        console.log("Sesión iniciada");
+
       } else {
         $("#contenido").load(enlace + " #info");
       }
@@ -26,12 +25,11 @@ $(document).ready(function () {
   });
   $(".navbar-nav").on("click", "#cerrar", function (e) {
     e.preventDefault();
-    console.log("Sesión cerrada");
     localStorage.setItem('isLoggedIn', false);
     $(".btn-nav").eq(4).remove();
     $(".btn-nav").removeClass("active btn-tema-nav");
     $("#contenido").load("index.html #info");
-    console.log("Sesión cerrada");
+
     $(".btn-nav").eq(0).addClass("active btn-tema-nav");
   });
   $(".btn-nav").click(function () {
@@ -90,7 +88,6 @@ $(document).ready(function () {
     // verifica si los datos son correctos
     desencriptarUsuario();
     if (username == correo && password == contra) {
-      console.log("Sesión iniciada");
       localStorage.setItem('isLoggedIn', true);
       if (localStorage.getItem("isLoggedIn") == "true" && btn.length == 4) {
         $(".navbar-nav").append('<li class="nav-item"><a id="cerrar" class="btn-nav btn rounded-pill text-tema" href="cerrar.html">Cerrar Sesion</a></li>');
@@ -320,7 +317,6 @@ $(document).ready(function () {
     var resultado = valor + " mm²";
     $("#resultado5").val(resultado);
   });
-
   $("#contenido").on("click", "#calcular-ducto", function () {
     var C24 = Number($("#cables").val());
     var C25 = Number($("#secConductor").val());
@@ -426,7 +422,6 @@ $(document).ready(function () {
     var resultado = valor + " mm";
     $("#resultado6").val(resultado);
   });
-
   $("#contenido").on("click", "#calcular-ductof", function () {
     var C30 = Number($("#cantCables").val());
     var C31 = Number($("#seccConductor").val());
